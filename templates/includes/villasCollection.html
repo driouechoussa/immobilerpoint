@@ -1,0 +1,34 @@
+{% load static %}
+
+<section class="villasCollection">
+    <div class="villas-textContent">
+        <h2>découvrir notre collection</h2>
+        <p>
+             une collection choisie de villas luxueuses au  Marrakech. Chaque villa allie l'élégance contemporaine au design traditionnel marocain.
+        </p>
+    </div>
+
+    
+    <div class="villas-cards-veiwer">
+      {% block villasViwer %}
+        {% for products in immobiler_Products %}
+          {% if forloop.counter <= 8 %}
+           <div class="card-villa-detail">
+            <img src="{{products.product_images.url}}" alt="villa image">
+            <h4 class="villa-location">{{products.product_type}}</h4>
+            <h3 class="villa-name">{{products.product_name}}</h3>
+            <div class="villa-countains">
+              <span class="guest-info"><i class="fa-solid fa-person-dress"></i> {{products.product_guests}}</span>
+              <span class="bed-info"><i class="fa-sharp fa-solid fa-bed"></i> {{products.product_bedrooms}}</span>
+              <span class="price-info">a partir de  {{products.product_price}} <i class="fa-solid fa-dollar-sign"></i></span>
+            </div>
+          </div>
+          {% endif %}
+         
+        {% endfor %}
+      {% endblock villasViwer %}
+    </div>
+    
+    {% include "includes/btn-SeeMore.html" %}
+    
+  </section>

@@ -1,0 +1,20 @@
+.Social-Links {
+    display: flex;
+
+    a {
+        margin: 15px;
+       
+        i {
+            font-size: 32px;
+            color: #fff;
+
+            &:hover {
+                color: #5682f3;
+                transition: .4s;
+            }
+
+        }
+    }
+    
+   
+}

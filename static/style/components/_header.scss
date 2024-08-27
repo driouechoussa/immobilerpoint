@@ -1,0 +1,43 @@
+header {
+    width: 100%;
+    max-height: 100vh;
+    
+
+    img {
+        width: inherit;
+        height: 100%;
+    }
+
+
+    .Hero-Content {
+        max-width: 1536px;
+        position: absolute;
+        top:285;
+        left: 192;
+       
+        
+
+        .Hero-Title {
+            color: #fff;
+            font-size: 62px;
+            text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+            padding: 10px;
+            span {
+                text-transform: capitalize;
+            }
+        }
+
+        .Hero-Subtitle {
+            color: #fff;
+            min-width: 550px;
+            font-size: 32px;
+            padding:10px;
+            letter-spacing: 1px;
+            text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+
+            
+        }
+
+     
+    }
+}

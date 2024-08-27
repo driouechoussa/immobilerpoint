@@ -1,0 +1,50 @@
+nav {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    background-color: transparent;
+    position: absolute;
+    
+  
+
+    a {
+        font-size: 18px;
+        color: #fff;
+        font-size: 32px;                                                
+        font-weight: 700;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    ul {
+        
+        display: flex;
+
+        li {
+            display: flex;
+            align-items:center;
+            margin: 0 25px;
+
+            
+            .navLink {
+                font-size: 32px;
+                text-transform: capitalize;
+                color: #fff;
+                font-weight: 400;
+                min-height: 40px;
+                padding: 8px 15px;
+                border-radius: 10px;
+
+                &:hover {
+                    background: #ffffff60;
+                    transition: .7s;
+                }
+            }
+        }
+    }
+
+
+}

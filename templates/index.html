@@ -1,0 +1,49 @@
+{% load static %}
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#011414">
+    <title>{{pageTitle}}</title>
+    <link rel="shortcut icon" href="{ static '' }" type="image/x-icon">
+    <meta name= “description” content= "Propriétés exclusives à Marrakech, alliant luxe moderne et charme traditionnel.">
+    <meta name= “author” content="Oussama Driouech">
+    <link rel="stylesheet" href="{% static 'style/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- including the navbar section -->
+
+    <header>
+   {% include "includes/nav.html" %}
+    <img id="bgHero" draggable="false" src="{% static 'imgs/bgs/heroBg-1.png' %}" alt="hero image" srcset="">
+    <div class="Hero-Content"> 
+        <h1 class="Hero-Title"><span>Refuges</span> de charme : La collection de cillas</h1>
+        <p class="Hero-Subtitle">Découvrez un monde où chaque villa incarne l'essence de l'élégance. 
+            Offrez-vous une évasion inoubliable dans des résidences conçues pour satisfaire 
+            les goûts les plus raffinés</p>
+            
+                {% include "includes/search-panel.html" %}
+
+        
+    </div>
+ </header>
+
+ 
+ 
+ {% include "includes/villasCollection.html" %}
+
+ {% include "includes/whyUs.html" %}
+
+ {% include "includes/blogsCollection.html" %}
+
+ 
+ {% include "includes/footer.html" %}
+
+ 
+</body>
+</html>

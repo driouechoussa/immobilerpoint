@@ -1,0 +1,25 @@
+{% load static %}
+<section class="blogsCollec-Section">
+    <div class="heading-container">
+       <h1 class="sec-blog-heading">dernières nouvelles</h1> 
+    </div>
+    
+    <div class="blogs-Card-Countainer">
+       {% block blogsViwer %}
+        {% for blog in blogsInfo %}
+        {% if forloop.counter <= 3  %}
+           <div class="card-blogs-detail">
+            <img class="blog-Image" src="{{blog.blog_title_image.url}}" alt="blog image">
+            <h3 class="blog-title">{{blog.blog_title}}</h3>
+            <p class="blog-textContent">
+                {{blog.blog_contentText}}
+            </p>
+            <span class="date-Created">{{blog.blog_TimeCreated | date:"Y-m-d"}}</span>
+          </div>
+        {% endif %}
+        {% endfor %}
+      {% endblock blogsViwer %}
+
+    </div>
+      {% include "includes/btn-SeeMore.html" %}
+ </section>
