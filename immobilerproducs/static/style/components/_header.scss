@@ -1,0 +1,62 @@
+header {
+    width: 100%;
+    max-height: 100vh;
+    
+
+    img {
+        width: inherit;
+        height: 100%;
+    }
+
+
+    .Hero-Content {
+        width: 80%;
+        height: 60%;
+        position: absolute;
+        top:25%;
+        left: 10%;
+        
+       
+        
+
+        .Hero-Title {
+            color: var(--white);
+            font-size: var(--Huge-Font-Size);
+            text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            text-align: center;
+            font-weight: var(--font-bold);
+            span {
+                text-transform: capitalize;
+            }
+        }
+
+        .Hero-Subtitle {
+            color: var(--white);
+            min-width: 550px;
+            font-size: var(--medium-Font-Size);
+            padding:10px;
+            letter-spacing: 1px;
+            text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+            text-align: center;
+
+            
+        }
+
+     
+    }
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width:1920px) { 
+    /* STYLES HERE */
+    :root {
+        --Huge-Font-Size: 52px;
+        --Larger-Font-Size: 60px; 
+        --big-Font-Size: 40px; //for subheading...
+        --medium-Font-Size: 25px; 
+
+        
+    }
+}
+
+

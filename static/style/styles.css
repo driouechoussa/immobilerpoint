@@ -1,3 +1,30 @@
+:root {
+  /*------------ Colors -----------*/
+  /*Primary*/
+  --Cornflower_Blue: rgb(86, 130, 243);
+  --Mine_Shaft: rgb(48, 48, 48);
+  /*Other Color*/
+  --Heather: rgb(185, 202, 211);
+  --white: rgb(255, 255, 255);
+  --Spun_Pearl:rgb(167, 167, 171);
+  /*------------typography-----------*/
+  /*typography*/
+  --Huge-Font-Size: 62px;
+  --Larger-Font-Size: 52px;
+  --Large-Font-Size:42px;
+  --Big-Font-Size: 32px;
+  --Normal-Font-Size: 25px;
+  --Medium-Font-Size: 21px;
+  --Small-Font-Size: 18px;
+  --Smaller-Font-Size: 15px;
+  /*Font weight */
+  --font-regular:400;
+  --font-medium:500;
+  --font-bold: 700;
+  /*Borders*/
+  --Search-Panel-Border: 1px solid rgb(167, 167, 171);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -16,23 +43,30 @@ ul li {
   list-style: none;
 }
 
+.Nav-scrolled {
+  background-color: #fff;
+  position: fixed;
+}
+
 nav {
   width: 100%;
-  min-height: 60px;
+  min-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 100px;
+  padding: 10px 100px;
   background-color: transparent;
   position: absolute;
 }
-nav a {
-  font-size: 18px;
+nav .logo {
+  width: 20%;
   color: #fff;
-  font-size: 32px;
   font-weight: 700;
   text-align: center;
   text-transform: capitalize;
+}
+nav .logo i {
+  font-size: var(--Big-Font-Size);
 }
 nav ul {
   display: flex;
@@ -47,47 +81,289 @@ nav ul li .navLink {
   text-transform: capitalize;
   color: #fff;
   font-weight: 400;
-  min-height: 40px;
-  padding: 8px 15px;
+  padding: 0 15px;
   border-radius: 10px;
 }
 nav ul li .navLink:hover {
   background: rgba(255, 255, 255, 0.3764705882);
   transition: 0.7s;
 }
+nav .btn-Side-Menu {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  display: none;
+  cursor: pointer;
+}
+nav .btn-Side-Menu i {
+  font-size: var(--Big-Font-Size);
+  color: var(--white);
+}
+nav .btn-Side-Menu .side-menu {
+  width: 90%;
+  height: 450px;
+  background-color: #fff;
+  position: absolute;
+  left: 5%;
+  top: 100%;
+  z-index: 300;
+  border-radius: 5px;
+  display: none;
+}
+nav .btn-Account {
+  background-color: var(--white);
+  padding: 9px;
+  border-radius: 50%;
+}
+nav .btn-Account i {
+  color: var(--Mine_Shaft);
+}
 
+@media only screen and (max-width: 480px) {
+  :root {
+    --Big-Font-Size: 32px;
+  }
+  nav {
+    padding: 5px 50px;
+  }
+  nav .logo span {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .Social-Links {
+    display: none;
+  }
+  nav .btn-Account {
+    display: none;
+  }
+  nav .btn-Side-Menu {
+    display: block;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  nav {
+    padding: 5px 50px;
+  }
+  nav .logo {
+    font-size: var(--Big-Font-Size);
+  }
+  nav .logo span {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .Social-Links {
+    display: none;
+  }
+  nav .btn-Side-Menu {
+    display: block;
+  }
+  nav .btn-Side-Menu {
+    display: block;
+  }
+  nav .btn-Account {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --Big-Font-Size: 30px;
+  }
+  nav {
+    padding: 5px 50px;
+  }
+  nav .logo span {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .Social-Links {
+    display: none;
+  }
+  nav .btn-Side-Menu {
+    display: block;
+  }
+  nav .btn-Account {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1279px) {
+  nav {
+    padding: 0 50px;
+  }
+  nav .logo {
+    font-size: var(--Small-Font-Size);
+  }
+  nav .logo i {
+    font-size: inherit;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  nav ul li .navLink {
+    font-size: var(--Smaller-Font-Size);
+    padding: 2px 10px;
+  }
+  nav .Social-Links {
+    display: none;
+  }
+  nav .btn-Side-Menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1480px) {
+  nav {
+    padding: 0 50px;
+  }
+  nav .logo {
+    font-size: var(--Small-Font-Size);
+  }
+  nav .logo i {
+    font-size: inherit;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  nav ul li .navLink {
+    font-size: var(--Small-Font-Size);
+    padding: 2px 15px;
+  }
+  nav .Social-Links {
+    display: none;
+  }
+  nav .btn-Side-Menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1481px) {
+  nav {
+    padding: 0 50px;
+  }
+  nav .logo {
+    font-size: var(--Normal-Font-Size);
+  }
+  nav .logo i {
+    font-size: inherit;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  nav ul li .navLink {
+    font-size: var(--Medium-Font-Size);
+    padding: 2px 10px;
+  }
+  nav .Social-Links {
+    display: none;
+  }
+  nav .btn-Side-Menu {
+    display: none;
+  }
+}
 header {
   width: 100%;
-  max-height: 100vh;
+  height: 90vh;
+  background-color: blueviolet;
 }
 header img {
   width: inherit;
-  height: 100%;
+  height: inherit;
 }
 header .Hero-Content {
-  max-width: 1536px;
+  width: 80%;
+  height: 60%;
   position: absolute;
-  top: 285;
-  left: 192;
+  top: 20%;
+  left: 10%;
 }
 header .Hero-Content .Hero-Title {
-  color: #fff;
-  font-size: 62px;
+  color: var(--white);
   text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  text-align: center;
 }
 header .Hero-Content .Hero-Title span {
   text-transform: capitalize;
 }
 header .Hero-Content .Hero-Subtitle {
   color: #fff;
-  min-width: 550px;
-  font-size: 32px;
+  width: 100%;
   padding: 10px;
   letter-spacing: 1px;
+  text-align: center;
   text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (max-width: 480px) {
+  header .Hero-Content .Hero-Title {
+    font-size: var(--Normal-Font-Size);
+  }
+  header .Hero-Content .Hero-Subtitle {
+    font-size: var(--Smaller-Font-Size);
+  }
+  header .Hero-Content .search-panel {
+    display: none;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  header .Hero-Content .Hero-Title {
+    font-size: var(--Normal-Font-Size);
+  }
+  header .Hero-Content .Hero-Subtitle {
+    font-size: var(--Small-Font-Size);
+    padding: 10px;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  header .Hero-Content .search-panel {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  header .Hero-Content .Hero-Title {
+    font-size: var(--Big-Font-Size);
+  }
+  header .Hero-Content .Hero-Subtitle {
+    font-size: var(--Medium-Font-Size);
+    padding: 10px;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  header .Hero-Content .search-panel {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1480px) {
+  header .Hero-Content .Hero-Title {
+    font-size: var(--Large-Font-Size);
+  }
+  header .Hero-Content .Hero-Subtitle {
+    font-size: var(--Small-Font-Size);
+    padding: 10px;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  header .Hero-Content .search-panel {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1481px) {
+  header .Hero-Content .Hero-Title {
+    font-size: var(--Larger-Font-Size);
+  }
+  header .Hero-Content .Hero-Subtitle {
+    font-size: var(--Normal-Font-Size);
+    padding: 10px;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  header .Hero-Content .search-panel {
+    display: block;
+  }
+}
 .villasCollection {
   width: 100%;
   max-height: 1000px;
@@ -102,14 +378,14 @@ header .Hero-Content .Hero-Subtitle {
   text-align: center;
   padding: 10px 0;
   text-transform: capitalize;
-  font-size: 45px;
+  font-size: 52px;
   font-weight: 400;
   color: #303030;
 }
 .villasCollection .villas-textContent p {
   text-align: center;
   color: #303030;
-  font-size: 18px;
+  font-size: 25px;
 }
 .villasCollection .villas-cards-veiwer {
   display: flex;
@@ -338,19 +614,22 @@ header .Hero-Content .Hero-Subtitle {
 }
 
 .search-panel {
-  max-width: 1200px;
+  width: 90%;
   margin: auto;
   display: flex;
-  padding: 40px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px;
 }
 .search-panel .choice-panel {
-  width: 250px;
-  height: 60;
-  border: 1px solid #a7a7ab;
+  width: 20%;
+  height: 15%;
+  border: 1px solid var(--Spun_Pearl);
   padding: 0 10px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  color: #a7a7ab;
+  border: var(--Search-Panel-Border);
+  color: var(--Spun_Pearl);
   text-transform: capitalize;
 }
 .search-panel .choice-panel:first-child {
@@ -360,9 +639,9 @@ header .Hero-Content .Hero-Subtitle {
   text-transform: capitalize;
 }
 .search-panel .serach-input {
-  width: 450px;
-  height: 60px;
-  border: 1px solid #a7a7ab;
+  width: 45%;
+  height: 15%;
+  border: var(--Search-Panel-Border);
   padding: 0 10px;
   font-size: 18px;
   font-weight: 600;
@@ -377,12 +656,12 @@ header .Hero-Content .Hero-Subtitle {
   text-transform: capitalize;
 }
 .search-panel .searchbtn {
-  width: 80px;
-  height: 60px;
+  width: 12%;
+  height: 15%;
   background-color: #5682f3;
   font-size: 21px;
   color: #fff;
-  border: 1px solid #a7a7ab;
+  border: var(--Search-Panel-Border);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }

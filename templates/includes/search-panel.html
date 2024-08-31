@@ -1,17 +1,19 @@
 {% load static %}
 <div class="search-panel">
     <select name="cars" class="choice-panel">
-        <option value="">sélectionner le type</option>
+        <option value="">type</option>
         {% for valueOption, label in products_types %}
             <option value="{{ valueOption }}">{{ label }}</option>
         {% endfor %}
       </select>
 
       <select name="cars" class ="choice-panel">
-        <option value="">sélectionner la ville</option>
+        <option value="">city</option>
         {% for valueOption, label in products_location %}
             <option value="{{ valueOption }}">{{ label }}</option>
         {% endfor %}
       </select>
-      <input type="text" class="serach-input" placeholder="recherche">
-      <button class="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+      <input type="text" class="serach-input" placeholder="search">
+      <button class="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    
+</div>

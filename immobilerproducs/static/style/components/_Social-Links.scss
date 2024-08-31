@@ -1,0 +1,20 @@
+.Social-Links {
+    display: flex;
+
+    a {
+        margin: 15px;
+       
+        i {
+            font-size: 32px;
+            color: var(--white);
+
+            &:hover {
+                color: var(--Cornflower_Blue);
+                transition: .4s;
+            }
+
+        }
+    }
+    
+   
+}

@@ -1,18 +1,21 @@
 
 .search-panel {
-    max-width: 1200px;                                      
+    width: 90%;                                      
     margin: auto;
     display: flex;
-    padding: 40px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 20px;
 
     .choice-panel{
-        width: 250px;
-        height:60;
-        border: 1px solid #a7a7ab;
+        width: 20%;
+        height:15%;
+        border: 1px solid var(--Spun_Pearl);
         padding: 0 10px;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 600;
-        color: #a7a7ab;
+        border: var(--Search-Panel-Border);
+        color: var(--Spun_Pearl);
         text-transform: capitalize;
         &:first-child {
             border-radius: 5px 0 0 5px;
@@ -25,9 +28,9 @@
     }
 
     .serach-input {
-        width: 450px;
-        height: 60px;
-        border: 1px solid #a7a7ab;
+        width: 45%;
+        height: 15%;
+        border: var(--Search-Panel-Border);
         padding: 0 10px;
         font-size: 18px;
         font-weight: 600;
@@ -40,12 +43,12 @@
     }
 
     .searchbtn {
-        width: 80px;
-        height: 60px;
+        width: 12%;
+        height: 15%;
         background-color: #5682f3;
         font-size: 21px;
         color: #fff;
-        border: 1px solid #a7a7ab;
+        border: var(--Search-Panel-Border);
         border-radius: 0 5px 5px 0;
         cursor: pointer;
     }

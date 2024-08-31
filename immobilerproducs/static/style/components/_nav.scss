@@ -1,0 +1,220 @@
+nav {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background-color: transparent;
+    position: absolute;
+    background-color: var(--white);
+    border: solid 1px var(--Heather);
+    
+    
+  
+
+    a {
+        font-size: 18px;
+        color: var(--Mine_Shaft);                                              
+        font-weight: 700;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    ul {
+        
+        display: flex;
+
+        li {
+            display: flex;
+            align-items:center;
+            margin: 0 25px;
+
+            
+            .navLink {
+                font-size: 21px;
+                text-transform: capitalize;
+                color: var(--Mine_Shaft);
+                font-weight: 600;
+                min-height: 40px;
+                padding: 8px 15px;
+                border-radius: 10px;
+
+                i {
+                    font-size: 18px;
+                    
+                }
+
+                &:hover {
+                    color: var(--Cornflower_Blue);
+                    transition: .7s;
+                }
+
+                .linkmore:hover .more-dropdown{
+                    display: block;
+                }
+
+
+                .more-dropdown {
+                    width: 70%;
+                    height: 400px;
+                    background-color: var(--white);
+                    position: absolute;
+                    left: 15%;
+                    top: 60px;
+                    z-index: 200;
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 5px;
+                    display: none;
+
+
+                    .components-part {
+
+                        width: 30%;
+                        height: 70%;
+                        border-right: 1px solid var(--Spun_Pearl);
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 10px;
+                        button {
+                            width: 80%;
+                            margin: auto;
+                            padding: 10px 0;
+                            cursor: pointer;
+                            text-transform: capitalize;
+                            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                            border: none;
+                            font-size: 18px;
+                            border-radius: 5px;
+                            background-color: #cfcfd1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .menu-Side-btn {
+        font-size: 32px;
+        width: 50px;
+        display: none;
+        
+    }
+
+
+    .logo {
+        font-size: 25px;
+    }
+
+
+}
+
+.Nav-scrolled {
+    position: fixed;
+    top: 0;
+    transition: .4s;
+    z-index: 100;
+}
+
+
+@media only screen and (max-width: 1500px) {
+
+    nav {
+         
+        padding: 5px 70px;
+
+        ul {
+        
+
+            li {
+
+            .navLink {
+                font-size: 18px;
+                font-weight: 500;
+                
+             } 
+            }
+        }
+
+        .logo {
+            font-size: 20px;
+        }
+       
+    }
+    
+}
+
+
+@media only screen and (max-width: 1410px) {
+
+    nav {
+         
+        padding: 0 50px;
+
+       ul {
+        li {
+            .navLink {
+                font-size: 16px;
+                
+            }
+        }
+       }
+
+       
+    }
+    
+}
+
+
+@media only screen and (max-width: 1310px) {
+
+    nav {
+         
+        padding: 5px 50px ;
+
+        a {
+            font-size: 21px;
+            font-size: 15px;
+            font-weight: 500;    
+        }
+
+        .logo {
+            font-size: 35px;
+            text-align: center;
+            span {
+                display: none;
+            }
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    nav {
+         
+        padding: 5px 50px ;
+
+        a:not(.logo) {
+            display: none;
+        }
+
+        .menu-Side-btn {
+            display: block;
+        }
+    
+
+
+    
+    }
+    
+}
+
+
+
+  
+  
+  

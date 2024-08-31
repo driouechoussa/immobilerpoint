@@ -19,17 +19,14 @@
   <!-- including the navbar section -->
 
     <header>
-   {% include "includes/nav.html" %}
+     {% include "includes/nav.html" %}
     <img id="bgHero" draggable="false" src="{% static 'imgs/bgs/heroBg-1.png' %}" alt="hero image" srcset="">
     <div class="Hero-Content"> 
         <h1 class="Hero-Title"><span>Refuges</span> de charme : La collection de cillas</h1>
-        <p class="Hero-Subtitle">Découvrez un monde où chaque villa incarne l'essence de l'élégance. 
-            Offrez-vous une évasion inoubliable dans des résidences conçues pour satisfaire 
-            les goûts les plus raffinés</p>
+        <p class="Hero-Subtitle">Discover a world where each villa embodies the essence of elegance. 
+            Treat yourself to an unforgettable escape in residences designed to satisfy</p>
             
                 {% include "includes/search-panel.html" %}
-
-        
     </div>
  </header>
 
@@ -44,6 +41,6 @@
  
  {% include "includes/footer.html" %}
 
- 
+   <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

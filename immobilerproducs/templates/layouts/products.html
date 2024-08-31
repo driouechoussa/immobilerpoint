@@ -1,0 +1,60 @@
+
+{% extends "includes/villasCollection.html" %}
+{% load static %}
+{% include "includes/nav.html" %}
+
+
+<link rel="stylesheet" href="{% static 'style/styles.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<section class="productlayout">
+    <div class="filterbar">
+        <select class="filterbar-item" name="" id="">
+            <option value="">sélectionner le type</option>
+            {% for valueOption, label in products_types %}
+                <option value="{{ valueOption }}">{{ label }}</option>
+            {% endfor %}
+        </select>
+
+      
+        <select class="filterbar-item" name="" class="choice-panel">
+            <option value="">sélectionner la ville</option>
+            {% for valueOption, label in products_location %}
+                <option value="{{ valueOption }}">{{ label }}</option>
+            {% endfor %}
+        </select>
+
+        <input class="filterbar-item" type="text" name="" placeholder="prix" id="">
+        <input class="filterbar-item" type="number" placeholder="chambre à coucher" name="" id="">
+        <input class="filterbar-item" type="number" placeholder="salle de bain" name="" id="">
+        <input class="filterbar-item" type="button" value="appliquer">
+    </div>
+
+    <div class="product-countainer">
+        <div class="side-choice-panel">
+
+        </div>
+    
+        <div class="product-viewr">
+            {% block villasViwer %}
+            {% for products in immobiler_Products %}
+              {% if forloop.counter <= 8 %}
+               <div class="card-villa-detail">
+                <img class="image-product" src="{{products.product_images.url}}" alt="villa image">
+                <h4 class="villa-location">{{products.product_type}}</h4>
+                <h3 class="villa-name">{{products.product_name}}</h3>
+                <div class="villa-countains">
+                  <span class="guest-info"><i class="fa-solid fa-person-dress"></i> {{products.product_guests}}</span>
+                  <span class="bed-info"><i class="fa-sharp fa-solid fa-bed"></i> {{products.product_bedrooms}}</span>
+                  <span class="price-info">a partir de  {{products.product_price}} <i class="fa-solid fa-dollar-sign"></i></span>
+                </div>
+              </div>
+              {% endif %}
+             
+            {% endfor %}
+          {% endblock villasViwer %}
+        </div>
+    </div>
+
+    {% include "includes/footer.html" %}
+</section>
+

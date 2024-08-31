@@ -1,0 +1,16 @@
+
+  {% load static %}
+   <nav id="navBar">
+        <a class="logo" href="{% url 'home' %}"><i class="fa-solid fa-sun"></i> <span>immobilerpoint</span></a>
+        <ul>
+          <li><a class = "navLink" href="#">category <i class="fa-solid fa-chevron-down"></i></a></li>
+          <li><a class = "navLink" href="#">find own</a></li>
+          <li><a class = "navLink" href="#">contact</a></li>
+          <li><a class = "navLink" href="#">blogs</a></li>
+          <li><a class = "navLink linkmore" href="#">more  <i class="fa-solid fa-chevron-down"></i></a></li>
+        </ul>
+
+        <a class="menu-Side-btn" href=""><i class="fa-solid fa-bars"></i></a>
+    
+        {% include "includes/btn_account.html" %}
+      </nav>

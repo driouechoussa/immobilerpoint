@@ -1,13 +1,24 @@
 
   {% load static %}
-   <nav>
-        <a href="#"><i class="fa-solid fa-sun"></i> immobilerpoint</a>
+   <nav id="bgHero">
+        <a class="logo" href="#"><i class="fa-solid fa-sun"></i> <span>immobilerpoint</span></a>
         <ul>
-          <li><a class = "navLink" href="#">villas</a></li>
-          <li><a class = "navLink" href="#">terrain</a></li>
-          <li><a class = "navLink" href="#">riads</a></li>
+          <li><a class = "navLink" href="#">summer fit</a></li>
+          <li><a class = "navLink" href="#">category <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a class = "navLink" href="#">blogs</a></li>
           <li><a class = "navLink" href="#">Contact</a></li>
+          <li><a class = "navLink" href="#">more <i class="fa-solid fa-angle-down"></i></a></li>
         </ul>
     
         {% include "includes/Social-Links.html" %}
+
+        <button id="btn-navMenu" class="btn-Side-Menu">
+           <i class="fa-solid fa-bars-staggered"></i>
+
+          <div class="side-menu">
+            
+          </div>
+        </button>
+
+        <a class="btn-Account" href="#"><i class="fa-solid fa-user"></i></a>
       </nav>

@@ -1,0 +1,27 @@
+.btnSqre {
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+   .villasSection-Sm-Btn {
+        width: 180px;
+        display: inline-block;
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 5px;
+        text-align: center;
+        border: 3px solid var(--Cornflower_Blue);
+        background: transparent;
+        text-transform: capitalize;
+        color: var(--Cornflower_Blue);
+
+        &:hover {
+            background-color: var(--Cornflower_Blue);
+            transition: .4s;
+            color: var(--white);
+        }
+
+       
+        
+   
+}  
+}
